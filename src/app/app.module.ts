@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TrainsComponent } from './pages/trains/trains.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
 import { EditTicketComponent } from './pages/edit-ticket/edit-ticket.component';
+import { EditTrainComponent } from './pages/edit-train/edit-train.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditTicketComponent } from './pages/edit-ticket/edit-ticket.component';
     HomeComponent,
     TrainsComponent,
     TicketsComponent,
-    EditTicketComponent
+    EditTicketComponent,
+    EditTrainComponent
   ],
   imports: [
     BrowserModule,

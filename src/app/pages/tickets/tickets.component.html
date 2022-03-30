@@ -9,6 +9,7 @@
           <th>Departure time</th>
           <th>Travel time</th>
           <th>Arrival time</th>
+          <th>Train</th>
           <th>Price</th>
           <th>
             <button class="btn btn-success btn-block" [routerLink]="['/edit-ticket', 0]"><i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -22,6 +23,7 @@
           <td>{{ ticket.departure_date }} {{ ticket.departure_time }}</td>
           <td>{{ ticket.travel_time }}</td>
           <td>{{ ticket.arrival_date }} {{ ticket.arrival_time }}</td>
+          <td>{{ ticket.train?.name }}</td>
           <td>{{ ticket.price }} HUF</td>
           <td>
             <div class="btn-group">

@@ -1,1 +1,28 @@
-<p>trains works!</p>
+<h1 class="text-center"> Trains</h1>
+<div class="container">
+
+
+  <div class="row">
+
+    <div class="card" style="width: 18rem;" *ngFor="let train of trainList$ | async">
+      <img [src]="'../../../assets/img/trains/1.jpg'" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ train.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ train.country }}, {{ train.year }}</h6>
+        <p class="card-text">{{ train.description }}</p>
+        <div class="btn-group">
+          <button class="btn btn-primary" [routerLink]="['/edit-train', train.id]"><i class="fa fa-pencil"
+              aria-hidden="true"></i></button>
+          <button class="btn btn-danger" (click)="onDelete(train)"><i class="fa fa-times"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;" [routerLink]="['/edit-train', 0]">
+      <h3>Add new train</h3>
+    </div>
+
+  </div>
+
+</div>

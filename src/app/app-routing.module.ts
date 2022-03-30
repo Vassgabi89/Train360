@@ -1,3 +1,4 @@
+import { EditTrainComponent } from './pages/edit-train/edit-train.component';
 import { EditTicketComponent } from './pages/edit-ticket/edit-ticket.component';
 import { TrainsComponent } from './pages/trains/trains.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'trains',
     component: TrainsComponent
+  },
+  {
+    path: 'edit-train/:id',
+    component: EditTrainComponent
   },
   {
     path: '**',

@@ -16,6 +16,7 @@ const analytics = getAnalytics(app);
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
+  //apiUrl: 'http://localhost:3000',
+  apiUrl: 'https://nettuts.hu/jms/Vassgabi89',
   firebaseConfig
 };

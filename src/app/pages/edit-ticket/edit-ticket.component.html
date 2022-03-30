@@ -1,89 +1,122 @@
 <div class="container" *ngIf="ticket">
   <div class="row">
-    <div class="col-6 offset-3">
+    <div class="col-6 offset-3 mt-3">
       <form #ticketForm="ngForm" (ngSubmit)='onSubmit(ticket)'>
 
-        <div class="form-group">
+        <div class="form-group" hidden>
           <label for="ticketID">ID</label>
-          <input [(ngModel)]="ticket.id" type="number" class="form-control" id="ticketID" name="ID" required disabled>
+          <input [(ngModel)]="ticket.id" type="number" class="form-control" id="ticketID" name="ID" required>
         </div>
 
-        <div class="form-group">
-          <label for="ticketDepLoc">Departure station*</label>
-          <input [(ngModel)]="ticket.departure_location" type="text" class="form-control" id="ticketDepLoc"
-            name="departure_location" required pattern="^[A-ZÁÉÍÓÚÖŐÜŰ][a-záéíóöőüűA-ZÁÉÍÓÚÖŐÜŰ0-9 .,-']{2,49}$">
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="ticketForm.controls['departure_location']?.valid || ticketForm.controls['departure_location']?.untouched">
-          The name of the departure station must be 3-50 characters long, starts with capital letter.
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="ticketDepLoc">Departure station*</label>
+              <input [(ngModel)]="ticket.departure_location" type="text" class="form-control" id="ticketDepLoc"
+                name="departure_location" required pattern="^[A-ZÁÉÍÓÚÖŐÜŰ][a-záéíóöőúüűA-ZÁÉÍÓÚÖŐÜŰ0-9 .,-]{2,49}$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="ticketForm.controls['departure_location']?.valid || ticketForm.controls['departure_location']?.untouched">
+              The name of the departure station must be 3-50 characters long, starts with capital letter.
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <label for="ticketArrLoc">Arrival station*</label>
+              <input [(ngModel)]="ticket.arrival_location" type="text" class="form-control" id="ticketArrLoc"
+                name="arrival_location" required pattern="^[A-ZÁÉÍÓÚÖŐÜŰ][a-záéíóúöőüűA-ZÁÉÍÓÚÖŐÜŰ0-9 .,-]{2,49}$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="ticketForm.controls['arrival_location']?.valid || ticketForm.controls['arrival_location']?.untouched">
+              The name of the arrival station must be 3-50 characters long, starts with capital letter.
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="ticketArrLoc">Arrival station*</label>
-          <input [(ngModel)]="ticket.arrival_location" type="text" class="form-control" id="ticketArrLoc"
-            name="arrival_location" required pattern="^[A-ZÁÉÍÓÚÖŐÜŰ][a-záéíóöőüűA-ZÁÉÍÓÚÖŐÜŰ0-9 .,-']{2,49}$">
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="ticketForm.controls['arrival_location']?.valid || ticketForm.controls['arrival_location']?.untouched">
-          The name of the arrival station must be 3-50 characters long, starts with capital letter.
+        <div class="row">
+          <div class="col-5">
+            <div class="form-group">
+              <label for="ticketDepDate">Departure date and time*</label>
+              <input [(ngModel)]="ticket.departure_date" type="text" class="form-control" id="ticketDepDate"
+                name="departure_date" required
+                pattern="^([0-9]|0[1-9]|1[0-2])\/([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/[1-9][0-9]{3}$">
+              <input [(ngModel)]="ticket.departure_time" type="text" class="form-control" id="ticketDepTime"
+                name="departure_time" required pattern="^([1-9]|1[0-2]):([0-9]|[0-5][0-9]) [AP]M$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="(ticketForm.controls['departure_date']?.valid || ticketForm.controls['departure_date']?.untouched) && (ticketForm.controls['departure_time']?.valid || ticketForm.controls['departure_time']?.untouched)">
+              The date of the departure must be <i>mm/dd/yyyy</i> and the time must be <i>hh:mm AM/PM</i> format.
+            </div>
+          </div>
+
+          <div class="col-2 px-0">
+            <div class="form-group">
+              <label for="ticketTravelTime">Travel time*</label>
+              <input [(ngModel)]="ticket.travel_time" type="text" class="form-control" id="ticketTravelTime"
+                name="travel_time" pattern="^([0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9])$" required>
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="ticketForm.controls['travel_time']?.valid || ticketForm.controls['travel_time']?.untouched">
+              The travel time must be <i>hh:mm</i> format.
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="form-group">
+              <label for="ticketArrDate">Arrival date and time</label>
+              <input [(ngModel)]="ticket.arrival_date" type="text" class="form-control" id="ticketArrDate"
+                name="arrival_date" pattern="^([0-9]|0[1-9]|1[0-2])\/([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/[1-9][0-9]{3}$">
+              <input [(ngModel)]="ticket.arrival_time" type="text" class="form-control" id="ticketArrTime"
+                name="arrival_time" pattern="^([1-9]|1[0-2]):([0-9]|[0-5][0-9]) [AP]M$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="(ticketForm.controls['arrival_date']?.valid || ticketForm.controls['arrival_date']?.untouched) && (ticketForm.controls['arrival_time']?.valid || ticketForm.controls['arrival_time']?.untouched)">
+              The date of the arrival must be <i>mm/dd/yyyy</i> and the time must be <i>hh:mm AM/PM</i> format.
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="ticketDepDate">Departure date and time*</label>
-          <input [(ngModel)]="ticket.departure_date" type="text" class="form-control" id="ticketDepDate"
-            name="departure_date" required pattern="^([0-9]|0[1-9]|1[0-2])\/([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/[1-9][0-9]{3}$">
-          <input [(ngModel)]="ticket.departure_time" type="text" class="form-control" id="ticketDepTime"
-            name="departure_time" required pattern="^([1-9]|1[0-2]):([0-9]|[0-5][0-9]) [AP]M$">
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="(ticketForm.controls['departure_date']?.valid || ticketForm.controls['departure_date']?.untouched) && (ticketForm.controls['departure_time']?.valid || ticketForm.controls['departure_time']?.untouched)">
-          The date of the departure must be <i>mm/dd/yyyy</i> and the time must be <i>hh:mm AM/PM</i> format.
-        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="ticketTransfers">Transfers*</label>
+              <input [(ngModel)]="ticket.transfers" type="number" class="form-control" id="ticketTransfers"
+                name="transfers" required pattern="^[0-9]{1}$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="ticketForm.controls['transfers']?.valid || ticketForm.controls['transfers']?.untouched">
+              The number of the transfers must be between 0 and 9.
+            </div>
+          </div>
 
-        <div class="form-group">
-          <label for="ticketTravelTime">Travel time</label>
-          <input [(ngModel)]="ticket.travel_time" type="text" class="form-control" id="ticketTravelTime"
-            name="travel_time" pattern="^([0-9]|1[0-9]|2[0-3]):([0-9]|[0-5][0-9])$">
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="ticketForm.controls['travel_time']?.valid || ticketForm.controls['travel_time']?.untouched">
-          The travel time must be <i>hh:mm</i> format.
-        </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for="ticketClass">Class*</label>
+              <select class="form-control" id="ticketClass" name="class" required>
+                <option [selected]="ticket.class === 1" value=1>First class</option>
+                <option [selected]="ticket.class === 2" value=2>Second class</option>
+              </select>
+            </div>
+          </div>
 
-        <div class="form-group">
-          <label for="ticketArrDate">Arrival date and time*</label>
-          <input [(ngModel)]="ticket.departure_date" type="text" class="form-control" id="ticketArrDate"
-            name="arrival_date" pattern="^([0-9]|0[1-9]|1[0-2])\/([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\/[1-9][0-9]{3}$" required>
-          <input [(ngModel)]="ticket.departure_time" type="text" class="form-control" id="ticketArrTime"
-            name="arrival_time" pattern="^([1-9]|1[0-2]):([0-9]|[0-5][0-9]) [AP]M$" required>
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="(ticketForm.controls['arrival_date']?.valid || ticketForm.controls['arrival_date']?.untouched) && (ticketForm.controls['arrival_time']?.valid || ticketForm.controls['arrival_time']?.untouched)">
-          The date of the arrival must be <i>mm/dd/yyyy</i> and the time must be <i>hh:mm AM/PM</i> format.
-        </div>
-
-        <div class="form-group">
-          <label for="ticketTransfers">Transfers*</label>
-          <input [(ngModel)]="ticket.transfers" type="number" class="form-control" id="ticketTransfers" name="transfers"
-            required pattern="^[0-9]{1}$">
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="ticketForm.controls['transfers']?.valid || ticketForm.controls['transfers']?.untouched">
-          The number of the transfers must be between 0 and 9.
-        </div>
-
-        <div class="form-group">
-          <label for="ticketClass">Class*</label>
-          <select class="form-control" id="ticketClass" name="class" required>
-            <option [selected]="ticket.class === 1" value=1>First class</option>
-            <option [selected]="ticket.class === 2" value=2>Second class</option>
-          </select>
+          <div class="col-4">
+            <div class="form-group">
+              <label for="ticketPrice">Price*</label>
+              <input [(ngModel)]="ticket.price" type="number" class="form-control" id="ticketPrice" name="price"
+                required pattern="^[1-9][0-9]{0,9}$">
+            </div>
+            <div class="alert alert-danger"
+              [hidden]="ticketForm.controls['price']?.valid || ticketForm.controls['price']?.untouched">
+              The price of the ticket is required.
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="ticketServices">Services</label>
           <textarea [(ngModel)]="ticket.services" class="form-control" id="ticketServices" name="services" cols="30"
-            rows="10" pattern=".{0,200}"></textarea>
+            rows="5" pattern=".{0,200}"></textarea>
         </div>
         <div class="alert alert-danger"
           [hidden]="ticketForm.controls['services']?.valid || ticketForm.controls['services']?.untouched">
@@ -91,12 +124,10 @@
         </div>
 
         <div class="form-group">
-          <label for="ticketPrice">Price*</label>
-          <input [(ngModel)]="ticket.price" type="number" class="form-control" id="ticketPrice" name="price" required>
-        </div>
-        <div class="alert alert-danger"
-          [hidden]="ticketForm.controls['price']?.valid || ticketForm.controls['price']?.untouched">
-          The price of the ticket is required.
+          <label for="train">Train*</label>
+          <select class="form-control" id="train" name="trainID" required (change)="show(ticket)">
+            <option *ngFor="let train of trainList$ | async" [selected]="ticket.trainID === train.id" value=train.id>{{ train.name }}</option>
+          </select>
         </div>
 
         <button [disabled]="!ticketForm.form.valid" type="submit" class="btn btn-primary">Submit</button>

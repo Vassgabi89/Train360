@@ -1,9 +1,8 @@
 {
-  "tickets": [
-    {
+  "tickets": [{
       "id": 1,
-      "departure_location": "Buliuuu",
-      "arrival_location": "Puan",
+      "departure_location": "Buliu",
+      "arrival_location": "Pu’an",
       "departure_date": "06/01/2022",
       "departure_time": "6:49 AM",
       "travel_time": "13:54",
@@ -11,7 +10,22 @@
       "arrival_time": "1:47 PM",
       "transfers": 3,
       "class": 1,
+      "trainID": 0,
       "price": 5234
+    },
+    {
+      "id": 2,
+      "departure_location": "Matou",
+      "arrival_location": "Kumane",
+      "departure_date": "04/23/2022",
+      "departure_time": "12:40 PM",
+      "travel_time": "5:58",
+      "arrival_date": "10/14/2021",
+      "arrival_time": "3:07 AM",
+      "transfers": 2,
+      "class": 1,
+      "trainID": 1,
+      "price": 13447
     },
     {
       "id": 3,
@@ -24,6 +38,7 @@
       "arrival_time": "5:24 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 2,
       "price": 49115
     },
     {
@@ -37,7 +52,22 @@
       "arrival_time": "7:46 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 3,
       "price": 16223
+    },
+    {
+      "id": 5,
+      "departure_location": "Palca",
+      "arrival_location": "Haczów",
+      "departure_date": "11/19/2022",
+      "departure_time": "5:24 AM",
+      "travel_time": "4:41",
+      "arrival_date": "07/08/2021",
+      "arrival_time": "5:31 AM",
+      "transfers": 1,
+      "class": 2,
+      "trainID": 4,
+      "price": 4359
     },
     {
       "id": 6,
@@ -50,6 +80,7 @@
       "arrival_time": "2:12 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 5,
       "price": 27116
     },
     {
@@ -63,6 +94,7 @@
       "arrival_time": "12:18 PM",
       "transfers": 1,
       "class": 2,
+      "trainID": 6,
       "price": 46798
     },
     {
@@ -76,6 +108,7 @@
       "arrival_time": "4:49 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 7,
       "price": 15405
     },
     {
@@ -89,6 +122,7 @@
       "arrival_time": "1:44 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 8,
       "price": 5403
     },
     {
@@ -102,6 +136,7 @@
       "arrival_time": "10:43 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 9,
       "price": 38957
     },
     {
@@ -115,6 +150,7 @@
       "arrival_time": "3:13 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 10,
       "price": 18373
     },
     {
@@ -128,6 +164,7 @@
       "arrival_time": "9:06 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 10,
       "price": 38873
     },
     {
@@ -141,6 +178,7 @@
       "arrival_time": "12:22 PM",
       "transfers": 1,
       "class": 1,
+      "trainID": 10,
       "price": 27549
     },
     {
@@ -154,6 +192,7 @@
       "arrival_time": "6:35 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 11,
       "price": 7127
     },
     {
@@ -167,6 +206,7 @@
       "arrival_time": "7:05 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 11,
       "price": 38967
     },
     {
@@ -180,6 +220,7 @@
       "arrival_time": "8:42 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 11,
       "price": 46743
     },
     {
@@ -193,6 +234,7 @@
       "arrival_time": "6:07 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 12,
       "price": 43190
     },
     {
@@ -207,6 +249,7 @@
       "transfers": 3,
       "class": 1,
       "services": "",
+      "trainID": 12,
       "price": 34400
     },
     {
@@ -220,6 +263,7 @@
       "arrival_time": "12:57 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 12,
       "price": 39139
     },
     {
@@ -233,6 +277,7 @@
       "arrival_time": "2:47 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 12,
       "price": 31349
     },
     {
@@ -246,6 +291,7 @@
       "arrival_time": "4:36 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 13,
       "price": 9151
     },
     {
@@ -259,6 +305,7 @@
       "arrival_time": "2:49 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 13,
       "price": 42005
     },
     {
@@ -272,6 +319,7 @@
       "arrival_time": "1:11 PM",
       "transfers": 0,
       "class": 2,
+      "trainID": 13,
       "price": 43089
     },
     {
@@ -285,6 +333,7 @@
       "arrival_time": "1:00 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 14,
       "price": 22250
     },
     {
@@ -298,6 +347,7 @@
       "arrival_time": "8:28 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 14,
       "price": 13544
     },
     {
@@ -311,6 +361,7 @@
       "arrival_time": "12:38 PM",
       "transfers": 1,
       "class": 1,
+      "trainID": 14,
       "price": 31358
     },
     {
@@ -324,6 +375,7 @@
       "arrival_time": "12:11 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 15,
       "price": 21756
     },
     {
@@ -337,6 +389,7 @@
       "arrival_time": "5:22 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 15,
       "price": 23334
     },
     {
@@ -350,6 +403,7 @@
       "arrival_time": "6:01 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 15,
       "price": 37835
     },
     {
@@ -363,6 +417,7 @@
       "arrival_time": "8:07 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 16,
       "price": 15533
     },
     {
@@ -376,6 +431,7 @@
       "arrival_time": "3:54 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 16,
       "price": 29789
     },
     {
@@ -389,6 +445,7 @@
       "arrival_time": "3:44 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 16,
       "price": 7139
     },
     {
@@ -402,6 +459,7 @@
       "arrival_time": "4:34 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 17,
       "price": 48667
     },
     {
@@ -415,6 +473,7 @@
       "arrival_time": "3:07 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 17,
       "price": 8656
     },
     {
@@ -428,6 +487,7 @@
       "arrival_time": "2:27 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 17,
       "price": 44867
     },
     {
@@ -441,6 +501,7 @@
       "arrival_time": "4:49 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 18,
       "price": 9668
     },
     {
@@ -454,6 +515,7 @@
       "arrival_time": "3:45 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 18,
       "price": 41129
     },
     {
@@ -468,6 +530,7 @@
       "transfers": 0,
       "class": 2,
       "services": "",
+      "trainID": 18,
       "price": 43918
     },
     {
@@ -481,6 +544,7 @@
       "arrival_time": "8:40 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 18,
       "price": 49075
     },
     {
@@ -494,6 +558,7 @@
       "arrival_time": "12:25 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 19,
       "price": 47349
     },
     {
@@ -507,6 +572,7 @@
       "arrival_time": "2:25 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 19,
       "price": 19309
     },
     {
@@ -520,6 +586,7 @@
       "arrival_time": "6:26 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 19,
       "price": 33965
     },
     {
@@ -533,6 +600,7 @@
       "arrival_time": "2:55 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 19,
       "price": 26709
     },
     {
@@ -546,6 +614,7 @@
       "arrival_time": "1:22 PM",
       "transfers": 3,
       "class": 1,
+      "trainID": 20,
       "price": 4777
     },
     {
@@ -560,6 +629,7 @@
       "transfers": 1,
       "class": 1,
       "services": "",
+      "trainID": 20,
       "price": 30378
     },
     {
@@ -573,6 +643,7 @@
       "arrival_time": "3:20 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 20,
       "price": 32271
     },
     {
@@ -586,6 +657,7 @@
       "arrival_time": "11:56 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 20,
       "price": 4862
     },
     {
@@ -599,6 +671,7 @@
       "arrival_time": "3:39 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 0,
       "price": 44344
     },
     {
@@ -612,6 +685,7 @@
       "arrival_time": "3:56 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 0,
       "price": 29315
     },
     {
@@ -625,6 +699,7 @@
       "arrival_time": "12:53 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 1,
       "price": 46976
     },
     {
@@ -638,6 +713,7 @@
       "arrival_time": "5:03 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 2,
       "price": 28686
     },
     {
@@ -651,6 +727,7 @@
       "arrival_time": "1:30 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 3,
       "price": 25118
     },
     {
@@ -664,6 +741,7 @@
       "arrival_time": "10:14 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 4,
       "price": 21017
     },
     {
@@ -677,6 +755,7 @@
       "arrival_time": "6:37 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 5,
       "price": 16073
     },
     {
@@ -690,6 +769,7 @@
       "arrival_time": "4:41 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 6,
       "price": 6626
     },
     {
@@ -703,6 +783,7 @@
       "arrival_time": "12:43 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 7,
       "price": 4492
     },
     {
@@ -716,6 +797,7 @@
       "arrival_time": "11:28 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 8,
       "price": 44208
     },
     {
@@ -729,6 +811,7 @@
       "arrival_time": "2:16 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 9,
       "price": 48601
     },
     {
@@ -742,6 +825,7 @@
       "arrival_time": "6:39 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 9,
       "price": 44881
     },
     {
@@ -755,6 +839,7 @@
       "arrival_time": "9:06 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 8,
       "price": 39385
     },
     {
@@ -768,6 +853,7 @@
       "arrival_time": "6:40 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 7,
       "price": 12851
     },
     {
@@ -781,6 +867,7 @@
       "arrival_time": "3:41 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 6,
       "price": 32799
     },
     {
@@ -794,6 +881,7 @@
       "arrival_time": "3:36 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 5,
       "price": 11069
     },
     {
@@ -807,6 +895,7 @@
       "arrival_time": "8:36 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 4,
       "price": 8842
     },
     {
@@ -820,6 +909,7 @@
       "arrival_time": "11:59 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 3,
       "price": 6358
     },
     {
@@ -833,6 +923,7 @@
       "arrival_time": "8:35 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 3,
       "price": 48747
     },
     {
@@ -846,6 +937,7 @@
       "arrival_time": "4:30 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 2,
       "price": 39322
     },
     {
@@ -859,6 +951,7 @@
       "arrival_time": "12:43 PM",
       "transfers": 1,
       "class": 1,
+      "trainID": 1,
       "price": 30914
     },
     {
@@ -872,6 +965,7 @@
       "arrival_time": "1:16 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 1,
       "price": 22019
     },
     {
@@ -885,6 +979,7 @@
       "arrival_time": "1:36 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 0,
       "price": 14602
     },
     {
@@ -898,6 +993,7 @@
       "arrival_time": "8:46 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 1,
       "price": 4311
     },
     {
@@ -911,6 +1007,7 @@
       "arrival_time": "10:00 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 2,
       "price": 12441
     },
     {
@@ -924,6 +1021,7 @@
       "arrival_time": "1:37 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 3,
       "price": 4084
     },
     {
@@ -937,6 +1035,7 @@
       "arrival_time": "10:27 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 3,
       "price": 45973
     },
     {
@@ -950,6 +1049,7 @@
       "arrival_time": "1:56 PM",
       "transfers": 2,
       "class": 1,
+      "trainID": 2,
       "price": 15227
     },
     {
@@ -963,6 +1063,7 @@
       "arrival_time": "5:17 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 4,
       "price": 44087
     },
     {
@@ -976,6 +1077,7 @@
       "arrival_time": "1:30 PM",
       "transfers": 2,
       "class": 1,
+      "trainID": 5,
       "price": 39042
     },
     {
@@ -989,6 +1091,7 @@
       "arrival_time": "1:38 PM",
       "transfers": 3,
       "class": 2,
+      "trainID": 5,
       "price": 19486
     },
     {
@@ -1002,6 +1105,7 @@
       "arrival_time": "2:10 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 4,
       "price": 22714
     },
     {
@@ -1015,6 +1119,7 @@
       "arrival_time": "12:59 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 7,
       "price": 22565
     },
     {
@@ -1028,6 +1133,7 @@
       "arrival_time": "1:49 PM",
       "transfers": 0,
       "class": 1,
+      "trainID": 6,
       "price": 32302
     },
     {
@@ -1041,6 +1147,7 @@
       "arrival_time": "12:43 PM",
       "transfers": 1,
       "class": 1,
+      "trainID": 6,
       "price": 11356
     },
     {
@@ -1054,6 +1161,7 @@
       "arrival_time": "10:12 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 5,
       "price": 43967
     },
     {
@@ -1068,6 +1176,7 @@
       "transfers": 0,
       "class": 1,
       "services": "",
+      "trainID": 6,
       "price": 13384
     },
     {
@@ -1081,6 +1190,7 @@
       "arrival_time": "7:48 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 7,
       "price": 32836
     },
     {
@@ -1094,6 +1204,7 @@
       "arrival_time": "1:28 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 8,
       "price": 37951
     },
     {
@@ -1107,6 +1218,7 @@
       "arrival_time": "1:38 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 9,
       "price": 25910
     },
     {
@@ -1120,6 +1232,7 @@
       "arrival_time": "10:11 AM",
       "transfers": 1,
       "class": 2,
+      "trainID": 9,
       "price": 3652
     },
     {
@@ -1133,6 +1246,7 @@
       "arrival_time": "10:18 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 8,
       "price": 3943
     },
     {
@@ -1146,6 +1260,7 @@
       "arrival_time": "3:02 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 5,
       "price": 15444
     },
     {
@@ -1159,6 +1274,7 @@
       "arrival_time": "9:09 AM",
       "transfers": 3,
       "class": 1,
+      "trainID": 11,
       "price": 29636
     },
     {
@@ -1172,6 +1288,7 @@
       "arrival_time": "10:45 AM",
       "transfers": 2,
       "class": 1,
+      "trainID": 18,
       "price": 17321
     },
     {
@@ -1185,6 +1302,7 @@
       "arrival_time": "5:27 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 4,
       "price": 31877
     },
     {
@@ -1198,6 +1316,7 @@
       "arrival_time": "4:07 AM",
       "transfers": 2,
       "class": 2,
+      "trainID": 17,
       "price": 26653
     },
     {
@@ -1211,6 +1330,7 @@
       "arrival_time": "10:36 AM",
       "transfers": 1,
       "class": 1,
+      "trainID": 10,
       "price": 26220
     },
     {
@@ -1224,6 +1344,7 @@
       "arrival_time": "8:05 AM",
       "transfers": 3,
       "class": 2,
+      "trainID": 20,
       "price": 39564
     },
     {
@@ -1237,6 +1358,7 @@
       "arrival_time": "11:24 AM",
       "transfers": 0,
       "class": 1,
+      "trainID": 0,
       "price": 37545
     },
     {
@@ -1250,6 +1372,7 @@
       "arrival_time": "1:56 PM",
       "transfers": 0,
       "class": 2,
+      "trainID": 2,
       "price": 18076
     },
     {
@@ -1263,6 +1386,7 @@
       "arrival_time": "4:01 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 18,
       "price": 23991
     },
     {
@@ -1276,22 +1400,157 @@
       "arrival_time": "11:24 AM",
       "transfers": 0,
       "class": 2,
+      "trainID": 6,
       "price": 38410
-    },
-    {
-      "id": 101,
-      "departure_location": "Budapest",
-      "arrival_location": "Paris",
-      "departure_date": "1/1/2022",
-      "departure_time": "12:00 AM",
-      "travel_time": "12:00",
-      "arrival_date": "1/1/2022",
-      "arrival_time": "12:00 PM",
-      "transfers": 0,
-      "class": 1,
-      "services": "seat reservation",
-      "price": 5000
     }
   ],
-  "trains": []
+  "trains": [
+    {
+      "id": 1,
+      "name": "Trans-Siberian Express",
+      "country": "Russia",
+      "year": 1891,
+      "description": "The Trans-Siberian Express built between 1891 to 1916 by order of the Russian Tsars Alexander III and his son Nicholas II, this largest railroad network in the world instantly became one of the most famous travel routes in the world. Connecting the main railway station in Moscow to the 9289km away city of Vladivostok, this impressive rail network became one of the easiest ways to travel across the vast expanses of Russia. Today, the trip from Moscow to Vladivostok on board the Trans-Siberian Express train “Rossiya” and “Golden Eagle” lasts 6 days and 4 hours, and the forked rail network at Ussuriysk enables the trains to travel further 3 days toward south, across the border of North Korea and straight to their capital of Pyongyang."
+    },
+    {
+      "id": 2,
+      "name": "Orient Express",
+      "country": "France",
+      "year": 1883,
+      "description": "Orient Express is without the doubt one of the most famous trains of all time. The real reason for its popularity lies in its level of service and the popular stories that were centered around it (most famously by a detective novel “Murder on the Orient Express” written by Agatha Christie). The train was built and maintained as one of the most premium railway trains in the world at that time, offering high-end service and comfort for wealthy and business passengers that traveled between cities of Paris and Istanbul (then known as Constantinople). The original route was maintained between 1883 and 1977, switching to the shorter trips between Paris and Vienna. Eventually, after its schedule covered shorter and shorter routes, the name Orient Express disappeared from the European train schedules on 14 December 2009."
+    },
+    {
+      "id": 3,
+      "name": "Flying Scotsman",
+      "country": "United Kingdom",
+      "year": 1862,
+      "description": "Flying Scotsman is the most famous train in Great Britain which connected the capitals of England and Scotland on a daily basis ever since 1862. During early decades, the travel time between London and Edinburgh was 10 and a half hours, but that time was eventually cut down by two hours. During the century and a half of service, this train line received many upgrades, with the latest modernization enabling it to finish its journey of 392 miles in just a 4 hours."
+    },
+    {
+      "id": 4,
+      "name": "Golden Arrow",
+      "country": "United Kingdom",
+      "year": 1929,
+      "description": "After the success of luxury train line, Orient Express, train and railway company Compagnie Internationale des Wagons-Lits (CIWL) decided to expand their presence and offer similar high-end lines all across the Europe. One of their most successful attempts was Golden Arrow, a fast passenger train that operated between Victoria Station in London to the coastal town of Dover, where passengers could board the ferry that would carry them to the France and the train with the same name (La Flèche d’Or which translates to The Golden Arrow) on their way to Paris. The line remained active until 1971."
+    },
+	{
+      "id": 5,
+      "name": "Blue Train",
+      "country": "South - Africa",
+      "year": 1923,
+      "description": "The art of luxury travel that was practiced by the CIWL company (who created and operated the lines of Orient Express and Golden Arrow) was perfected with Blue Train. Often promoted as “ magnificent moving five-star hotel”, Blue Train offers an unparalleled level of high-end service on its journey between the South African capital of Cape Town and the city of Pretoria. In its modern configuration, it offers butler service, fully soundproofed cars, elegantly designed interiors, fully carpeted compartments and the wide array of cars for entertainment (lounges, observation decks and more)."
+    },
+    {
+      "id": 6,
+      "name": "Bullet Train (Shinkansen)",
+      "country": "Japan",
+      "year": 1964,
+      "description": "The increasing need for evolving public transport pushed Japan into creating Shinkansen, a network of train lines specifically created for high speed in 1964. The trains on that high-speed network gained nickname Bullet Trains, and in the following decades, both the trains and the railway network received numerous upgrades. Conventional rail trains can reach maximum operating speeds of 240-320km/h, while one line that uses maglev technology (Tokyo-Nagoya) can reach up to 603km/h."
+    },
+    {
+      "id": 7,
+      "name": "TGV",
+      "country": "France",
+      "year": 1970,
+      "description": "The pride of France train network TGV (Train a Grande Vitesse, translated to “high-speed train”) was built in the 1970s as a solution for transporting people between major cities with speeds of up to 320km/h and sometimes average trip speeds of almost 280 km/h. The great success of the commercial use of TGV in 1981 caused large expansion of high-speed railway lines across the France. Neighboring countries such as Spain, Italy, and Germany quickly emulated France by building their high-speed network lines, but none of them managed to find the worldwide fame as TGV."
+    },
+    {
+      "id": 8,
+      "name": "Eurostar",
+      "country": "France",
+      "year": 1968,
+      "description": "The difficulties of travel between England and France caused authorities to invest billions of euros into the construction of the 50.5-kilometer long underground tunnel under English Chanel and implementation of the famous high-speed Eurostar train line that connects London and Paris. Currently, the travel time of Eurostar between those cities is 2 hours and 15 minutes. The average speed of Eurostar is around 300 km/h, except during the passage through Channel Tunnel where the speed is reduced to 160 km/h for safety reasons."
+    },
+    {
+      "id": 9,
+      "name": "Ghan",
+      "country": "Australia",
+      "year": 1929,
+      "description": "The difficulties of travel between England and France caused authorities to invest billions of euros into the construction of the 50.5-kilometer long underground tunnel under English Chanel and implementation of the famous high-speed Eurostar train line that connects London and Paris. Currently, the travel time of Eurostar between those cities is 2 hours and 15 minutes. The average speed of Eurostar is around 300 km/h, except during the passage through Channel Tunnel where the speed is reduced to 160 km/h for safety reasons."
+    },
+    {
+      "id": 10,
+      "name": "Indian Pacific",
+      "country": "Australia",
+      "year": 1970,
+      "description": "In addition to Ghan which connects Adelaide and Darwin from south to north coast of Australia, this large country also has a large train route that connects it from west to east. Indian Pacific train line runs between Sidney, on the Pacific Ocean, all the way to Perth, on the coast of Indian Ocean. The journey across the 3960 km of Australian desert lasts three days, which includes the travel across the longest stretch of perfectly straight railway track in the world (477 kilometers)."
+    },
+    {
+      "id": 11,
+      "name": "Super Chief",
+      "country": "USA",
+      "year": 1936,
+      "description": "Super Chief is one of the most famous trains in the United States connected the Los Angles, California, and Chicago, Illinois. It did so in a spectacular manner, with the high-end service offering, premium lodging, and prices that attracted wealthier and business customers. Super Chief train started its operation in 1936 on the line that was 3584 km long, traveling initially twice per week and once per day starting 1948. It reached its popularity because it often transported famous clientele from Hollywood."
+    },
+    {
+      "id": 12,
+      "name": "Peruvian Central Railway",
+      "country": "Peru",
+      "year": 1869,
+      "description": "Peruvian Central Railw ay train line gained fame across the world for being the highest altitude train line in the world. During the journey between La Oroya and Lima, that features 66 tuneless and 56 bridges, trains on this line climb all the way to the altitude of 3.9 kilometers. Because of this, Peruvian Central Railway trains have an onboard doctor that can help passengers who experience symptoms of altitude sickness."
+    },
+    {
+      "id": 13,
+      "name": "Maharajas Express",
+      "country": "India",
+      "year": 2010,
+      "description": "Maharajas Express from India is regarded today as one of the most luxurious trains ever created. It offers truly state of the art facilities and amenities, and even “Presidential Suite” - a train car dedicated to one passenger. Because this it dedicates so much space to each user, it's maximum capacity is just 88 people."
+    },
+    {
+      "id": 14,
+      "name": "Bernina Express",
+      "country": "Switzerland",
+      "year": 1908,
+      "description": "Taken for a mile for a mile, the Bernina Express - running from Chur and St. Moritz in eastern Switzerland to Tirano in Northern Italy - is considered the most scenic journey in the world, and for good reason. The 90-mile, four-hour trek is every bit as amazing as you may have heard, journeying through 55 tunnels and 196 bridges, and offering unforgettable views of the spectacular alpine landscape, massive waterfalls, dramatic glaciers, and deep ravines. The red carriages feature panoramic windows so there are no bad seats, and you can enjoy food, drinks, and live commentary on board."
+    },
+    {
+      "id": 15,
+      "name": " Flam",
+      "country": "Norway",
+      "year": 1941,
+      "description": "Feel like you're on top of the world - literally - at the start of the 310-mile railway running from Oslo to Bergen in Norway - the highest major train route in Northern Europe. The journey from the mountain station of Myrdal down to Flam deep in the fjord has been voted one of the most scenic rail journeys in the world, and is also one of the steepest normal track railway lines, dropping 2,824 feet to the fjord below in just under an hour. Take in the awe-inspiring views of rugged mountains, deep valleys, and thundering waterfalls as you descend into the Aurlandsfjord."
+    },
+    {
+      "id": 16,
+      "name": "Rocky Mountaineer",
+      "country": "Canada",
+      "year": 1990,
+      "description": "A journey aboard the famed navy blue and gold carriages of the Rocky Mountaineer has topped many a bucket list over the years. Synonymous with true luxury, breathtaking adventures, delicious food, inspiring landscapes, and unparalleled service – Canada’s Rocky Mountains await, and this is a truly spectacular way to experience them! The thrilling two-day journey covers four different routes through the Rockies to Banff, Jasper,  Lake Louise, Whistler, and Quesnel, over the old Canadian Pacific line to Vancouver, which created the modern nation of Canada in 1885. Experience glacier-fed lakes, lush forests, rushing rivers, and an abundance of wildlife right outside your window. If you book a “Gold Leaf” ticket, you will enjoy riding and dining in traditional-style Dome Cars for premium views and the utmost comfort."
+    },
+    {
+      "id": 17,
+      "name": "Jacobite Steam Train",
+      "country": "United Kingdom",
+      "year": 1901,
+      "description": "Discover one of Britain’s best-loved scenic railways on this epic 42-mile journey, through the dramatic, wild expanses of the Scottish Western Highlands. Travel by steam train on the vintage carriages of The Jacobite, starting at the highest mountain in Britain, Ben Nevis, in Fort William. Marvel at the natural sights out your window as the train winds through mountain and glen, and over massive viaducts to Europe’s deepest seawater loch, Loch Morar, on the way to Mallaig. You'll also stop at the charming village of Glenfinnan and pass scenic beaches before the commencement of your journey. This scenic line has come to have more recent popularity as the Hogwarts Express, as it was featured in the famous Harry Potter books and movies."
+    },
+    {
+      "id": 18,
+      "name": "Cruise Train",
+      "country": "Japan",
+      "year": 2013,
+      "description": "Often referred to as the world's most luxurious train, Japan's Cruise Train Seven Stars brings old-school luxury to a technologically advanced railway. It lays claim to being the country's first luxury sleeper, with its first run in 2013. With multi-day tours around the island of Kyushu, riders onboard the Seven Stars will get up close to both mountains and the seaside. But fair warning — the train can only carry up to 28 passengers at a time. Demand is so high that prospective riders must enter a lottery, and winners are then invited to purchase their place on an upcoming itinerary."
+    },
+    {
+      "id": 19,
+      "name": "The Mallard",
+      "country": "United Kingdom",
+      "year": 1938,
+      "description": "The LNER Mallard became the world's fastest train at a fascinating speed of 125.88 mph on July 3, 1938. The trains traveled for approximately one and half million miles. The steam locomotive ceased to operate in 1963 and since then Mallard has been a part of National Railway Museum in York."
+    },
+    {
+      "id": 20,
+      "name": "The Presidential Train",
+      "country": "Portugalia",
+      "year": 1890,
+      "description": "Portugal's Douro Valley has become an internationally recognized culinary destination. The Presidential Train brings some of the world's finest chefs to some of the world's freshest food as it chugs from Porto to Quinta do Vesuvio, on the eastern coast of the Douro Valley. Acclaimed chefs board every day for ten hours of dining delight, paired with wines from the region. Passengers can relax in private cabins and watch the golden valley through their windows as they wait for meal service."
+    },
+    {
+      "id": 21,
+      "name": "20th Century Limited",
+      "country": "USA",
+      "year": 1902,
+      "description": "The United States had several famous trains during its long history of railroad transport, but none received more attention and popularity than the 20th Century Limited – an express passenger train that ran the route between New York City and Chicago from 1902 to 1967. During its time of operation, it not only significantly shortened travel time between those two cities, but it also catered upper classes of passengers (richer or business travelers) that expected a certain level of high-end service during their trips. 20th Century Limited train catered to their needs by offering high-class catering, fast travel, premium logging, and red carpet boarding and exiting on the stations in NYC's Grand Central Terminal station and Chicago's LaSalle Street Station. 1938 version of the 20th Century Limited was rated by many as the ultimate ground-based passenger travel service of that time."
+    }
+  ]
 }

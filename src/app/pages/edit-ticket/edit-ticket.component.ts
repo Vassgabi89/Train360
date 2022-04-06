@@ -68,8 +68,4 @@ export class EditTicketComponent implements OnInit {
     //this.router.navigateByUrl('tickets')
   }
 
-  show(ticket: Ticket) {
-    console.log(ticket.trainID)
-  }
-
 }

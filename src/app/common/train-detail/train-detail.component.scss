@@ -1,0 +1,52 @@
+@use "../../../assets/style/colors"as *;
+
+@font-face {
+  font-family: "Railroad";
+  src: url("../../../assets/font/IFC_RAILROAD.ttf");
+}
+
+h1 {
+  font-family: "Railroad";
+  color: $orange;
+  text-shadow: 2px 2px 5px $darkBlue;
+}
+
+.trainDetailModal {
+  position: fixed !important;
+  z-index: 2;
+  top: 7%;
+  width: 70%;
+  border: 5px solid $orange;
+  background-color: $lightBlue;
+  border-radius: 20px;
+  left: 15%;
+  //overflow-y: auto;
+}
+
+.trainContent {
+  max-height: 100%;
+  //overflow-y: auto;
+}
+
+.imgContainer {
+  text-align: center;
+}
+
+.closeModalBtn {
+  float: right;
+  width: 30px !important;
+  height: 30px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .trainDetailModal {
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 10%;
+  }
+
+}

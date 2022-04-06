@@ -19,4 +19,9 @@ export class Ticket {
   services?: string = 'seat reservation'
 
   price: number = 5000
+
+  passengers?: number = 1
+  reducedFare?: number = 0
+  fullPrice?: number = 5000
+
 }

@@ -16,7 +16,8 @@ export class TrainService {
     private http: HttpClient
   ) { }
 
-  get(id: number): Observable<Train> {
+  get(id_: any): Observable<Train> {
+    const id = parseInt(id_)
     return this.http.get<Train>(`${this.apiUrl}/${this.entityName}/${id}`)
   }
 
@@ -25,7 +26,6 @@ export class TrainService {
     datas.subscribe(
       trains => { trains.forEach(train => {
         train.pic= (`../../../assets/img/trains/${train.id}.jpg`)
-        console.log(train)
       })
       }
     )

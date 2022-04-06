@@ -94,8 +94,8 @@
             <div class="form-group">
               <label for="ticketClass">Class*</label>
               <select class="form-control" id="ticketClass" name="class" required>
-                <option [selected]="ticket.class === 1" value=1>First class</option>
-                <option [selected]="ticket.class === 2" value=2>Second class</option>
+                <option [selected]="ticket.class === 1" (ngValue)=1>First class</option>
+                <option [selected]="ticket.class === 2" (ngValue)=2>Second class</option>
               </select>
             </div>
           </div>
@@ -125,7 +125,7 @@
 
         <div class="form-group">
           <label for="train">Train*</label>
-          <select class="form-control" id="train" name="trainID" required (change)="show(ticket)">
+          <select class="form-control" id="train" name="trainID" required>
             <option *ngFor="let train of trainList$ | async" [selected]="ticket.trainID === train.id" value=train.id>{{ train.name }}</option>
           </select>
         </div>

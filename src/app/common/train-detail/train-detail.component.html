@@ -1,1 +1,20 @@
-<p>train-detail works!</p>
+<div *ngIf="showTrainDetail && train" class="trainDetailModal p-4">
+  <div class="trainContent">
+    <button (click)="closeModal()" class="btn-danger closeModalBtn">
+      <i class="fa fa-times"></i>
+    </button>
+
+    <h1 class="text-center font-weight-bold">{{ train.name }}</h1>
+
+    <div class="imgContainer">
+    <img [src]="train.pic" [alt]="train.name" height="500px">
+    </div>
+
+    <h5 class="mt-3 mb-2">Created in {{train.country}}, {{train.year}}</h5>
+
+    <h6>{{ train.description }}</h6>
+
+    <button (click)="buyTicketForTrain(train)" class="btn btn-success">Buy ticket for {{ train.name }}</button>
+
+  </div>
+</div>

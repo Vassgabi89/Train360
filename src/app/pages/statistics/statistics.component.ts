@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { filter, Observable, toArray, map, reduce, switchMap, } from 'rxjs';
-import * as Chartist from 'chartist';
+//import * as Chartist from 'chartist';
 
 @Component({
   selector: 'app-statistics',
@@ -11,42 +11,6 @@ export class StatisticsComponent implements OnInit {
 
   constructor(
   ) { }
-
-
-
-  startAnimationForLineChart(chart: any) {
-    let seq: any, delays: any, durations: any;
-    seq = 0;
-    delays = 80;
-    durations = 500;
-
-    chart.on('draw', function (data: any) {
-      if (data.type === 'line' || data.type === 'area') {
-        data.element.animate({
-          d: {
-            begin: 600,
-            dur: 700,
-            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-            to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint
-          }
-        });
-      } else if (data.type === 'point') {
-        seq++;
-        data.element.animate({
-          opacity: {
-            begin: seq * delays,
-            dur: durations,
-            from: 0,
-            to: 1,
-            easing: 'ease'
-          }
-        });
-      }
-    });
-
-    seq = 0;
-  };
 
 
   startAnimationForBarChart(chart: any) {
@@ -130,8 +94,6 @@ export class StatisticsComponent implements OnInit {
         }
       }]
     ];
-    const lastOrderIncome = new Chartist.Bar('#lastOrderIncome', data, optionslastOrderIncome, responsiveOptions);
-    lastOrderIncome;
     //this.startAnimationForBarChart(lastOrderIncome);
   }
 
@@ -141,26 +103,6 @@ export class StatisticsComponent implements OnInit {
       labels: dataX,
       series: [dataY]
     };
-
-    const optionsOrderCumulativeSum: any = {
-      lineSmooth: Chartist.Interpolation.cardinal({
-        tension: 2
-      }),
-      low: 0,
-      chartPadding: { top: 25, right: 0, bottom: 0, left: 0 },
-
-      axisY: {
-        offset: 80,
-        labelInterpolationFnc: function (value: any) {
-          return value / 1000 + 'k EUR'
-        },
-        scaleMinSpace: 15
-      }
-    }
-
-    const lastOrderCumulativeSum = new Chartist.Line('#lastOrderCumulativeSum', data, optionsOrderCumulativeSum);
-
-    lastOrderCumulativeSum;
     //this.startAnimationForLineChart(lastOrderCumulativeSum);
   }
 
@@ -177,7 +119,6 @@ export class StatisticsComponent implements OnInit {
       }
     };
 
-    new Chartist.Pie('#productRangePieChart', data, options);
   }
 
 
@@ -202,7 +143,6 @@ export class StatisticsComponent implements OnInit {
       chartPadding: { top: 20, right: 15, bottom: -5, left: 0 }
     };
 
-    new Chartist.Bar('#productRangeBarCart', data, options);
   }
 
 
@@ -220,7 +160,6 @@ export class StatisticsComponent implements OnInit {
         return value + " - " + Math.round(data.series[idx] / data.series.reduce((a, b) => a + b) * 100) + '%';
       }
     };
-    new Chartist.Pie('#OrderNumberByStatusPieChart', data, options);
   }
 
 
@@ -244,7 +183,6 @@ export class StatisticsComponent implements OnInit {
       },
       chartPadding: { top: 20, right: 15, bottom: -5, left: 0 }
     };
-    new Chartist.Bar('#orderByStatus', data, options);
   }
 
 

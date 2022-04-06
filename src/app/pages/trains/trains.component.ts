@@ -13,6 +13,8 @@ export class TrainsComponent implements OnInit {
   admin:boolean = (localStorage.getItem('admin') === 'true' ? true : false)
 
   trainList$ = this.trainService.getAll()
+  myTrain!: Train
+  showTrainDetail: boolean = false
 
   constructor(
     private trainService: TrainService,
@@ -21,6 +23,11 @@ export class TrainsComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  onSelect(train: Train):void {
+    this.myTrain = train
+    this.showTrainDetail = true
   }
 
   onDelete(train: Train): void {

@@ -1,36 +1,100 @@
-<h1 class="text-center"> Tickets</h1>
+<h1 class="text-center my-5"> Tickets</h1>
+
+  <!-- search area -->
+  <div class="row mx-5">
+  <div class="col-3 col-lg-8">
+    <p class="text-right font-weight-bold pt-2 searchTicket">Search tickets:</p>
+  </div>
+  <div class="col-4 col-lg-2">
+    <select class="form-control " required [(ngModel)]="searchKey" (change)="clearKeyword()" (change)="clearKeywordMinMax()">
+      <option [value]="'arrival_location'">Arrival</option>
+      <option [value]="'departure_location'">Departure</option>
+      <option [value]="'arrival_date'">Arrival date</option>
+      <option [value]="'departure_date'">Departure date</option>
+      <option [value]="'train?.name'">Train</option>
+      <option [value]="'price'">Price</option>
+      <option [value]="'class'">Class</option>
+    </select>
+  </div>
+  <div *ngIf="searchKey === 'arrival_location' || searchKey === 'departure_location' || searchKey === 'arrival_date' || searchKey === 'departure_date' || searchKey === 'train?.name'"
+    class="col-5 col-lg-2">
+    <input type="text" class="form-control" [(ngModel)]="keyword" placeholder="Search">
+  </div>
+  <div *ngIf="searchKey === 'price'" class="col-5 col-lg-2">
+    <input style="width: 40%" type="text" class="form-control ml-3 mr-1 float-left" [(ngModel)]="keywordMin"
+      placeholder="Min" (keydown)="clearKeyword()" />
+    <span class="float-left mt-2">-</span>
+    <input style="width: 40%" type="text" class="form-control ml-1 float-left" [(ngModel)]="keywordMax"
+      placeholder="Max" (keydown)="clearKeyword()" />
+  </div>
+  <div *ngIf="searchKey === 'class'" class="col-5 col-lg-2">
+    <select class="form-control text-center" [(ngModel)]="keyword">
+      <option [value]=1>First class</option>
+      <option [value]=2>Second class</option>
+    </select>
+  </div>
+</div>
+
 
   <div class="row mx-5">
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Departure</th>
-          <th>Arrival</th>
-          <th>Departure time</th>
-          <th>Travel time</th>
-          <th>Arrival time</th>
-          <th>Train</th>
-          <th>Price</th>
-          <th>
+          <th (click)="sorting('departure_location')">Departure
+            <i *ngIf="sortKey == 'departure_location' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'departure_location' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('arrival_location')">Arrival
+            <i *ngIf="sortKey == 'arrival_location' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'arrival_location' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('departure_date')" class="hideInMobileView">Departure time
+            <i *ngIf="sortKey == 'departure_date' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'departure_date' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('travel_time')" class="hideInTabletView">Travel time
+            <i *ngIf="sortKey == 'travel_time' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'travel_time' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('arrival_date')" class="hideInMobileView">Arrival time
+            <i *ngIf="sortKey == 'arrival_date' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'arrival_date' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('trainID')">Train
+            <i *ngIf="sortKey == 'trainID' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'trainID' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('class')" class="hideInTabletView">Class
+            <i *ngIf="sortKey == 'class' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'class' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th (click)="sorting('price')">Price
+            <i *ngIf="sortKey == 'price' && sortDirection  == 'A...Z'"class="fa fa-caret-up ml-2"></i>
+            <i *ngIf="sortKey == 'price' && sortDirection  == 'Z...A'"class="fa fa-caret-down ml-2"></i>
+          </th>
+          <th *ngIf="admin">
             <button class="btn btn-success btn-block" [routerLink]="['/edit-ticket', 0]"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </th>
+          <th *ngIf="!admin">
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let ticket of ticketList$ | async">
+        <tr class="ticket" *ngFor="let ticket of ticketList$ | async | filter: searchKey:keyword:keywordMin:keywordMax | sorter: sortKey:sortDirection">
           <td>{{ ticket.departure_location }}</td>
           <td>{{ ticket.arrival_location }}</td>
-          <td>{{ ticket.departure_date }} {{ ticket.departure_time }}</td>
-          <td>{{ ticket.travel_time }}</td>
-          <td>{{ ticket.arrival_date }} {{ ticket.arrival_time }}</td>
+          <td class="text-center hideInMobileView">{{ ticket.departure_date }} {{ ticket.departure_time }}</td>
+          <td class="text-center hideInTabletView">{{ ticket.travel_time }}</td>
+          <td class="text-center hideInMobileView">{{ ticket.arrival_date }} {{ ticket.arrival_time }}</td>
           <td>{{ ticket.train?.name }}</td>
-          <td>{{ ticket.price }} HUF</td>
-          <td>
-            <div class="btn-group">
+          <td class="text-center hideInTabletView">{{ ticket.class }}</td>
+          <td class="text-center">{{ ticket.price }} Ft</td>
+          <td class="text-center">
+            <div *ngIf="admin" class="btn-group">
               <button class="btn btn-primary" [routerLink]="['/edit-ticket', ticket.id]"><i class="fa fa-pencil" aria-hidden="true"></i></button>
               <button class="btn btn-danger" (click)="onDelete(ticket)"><i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
-            <div class="btn-group">
+            <div *ngIf="!admin" class="btn-group">
               <button class="btn btn-info"><i class="fa fa-eye" aria-hidden="true"></i></button>
               <button class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
             </div>

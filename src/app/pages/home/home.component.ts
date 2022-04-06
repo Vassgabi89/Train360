@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  admin:boolean = (localStorage.getItem('admin') === 'true' ? true : false)
+
   constructor() { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem('admin')) localStorage.setItem('admin', 'false')
   }
 
 }

@@ -5,4 +5,5 @@ export class Train {
   country?: string = ''
   year?: number = 1900
   description: string = ''
+  pic?: string = ''
 }

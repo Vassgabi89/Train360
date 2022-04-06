@@ -21,7 +21,15 @@ export class TrainService {
   }
 
   getAll(): Observable<Train[]> {
-    return this.http.get<Train[]>(`${this.apiUrl}/${this.entityName}`)
+    const datas = this.http.get<Train[]>(`${this.apiUrl}/${this.entityName}`)
+    datas.subscribe(
+      trains => { trains.forEach(train => {
+        train.pic= (`../../../assets/img/trains/${train.id}.jpg`)
+        console.log(train)
+      })
+      }
+    )
+    return datas
   }
 
   create(train:Train): Observable<any> {

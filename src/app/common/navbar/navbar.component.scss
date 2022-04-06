@@ -1,0 +1,35 @@
+@use "../../../assets/style/colors" as *;
+
+.navbar-brand{
+  color: $orange;
+  text-shadow: 1px 1px 2px $darkBlue;
+}
+
+nav {
+  background-color: $middleBlue!important;
+}
+
+.nav-item:hover{
+  font-weight: bold;
+  transition: 500ms;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.nav-item{
+  color: inherit;
+  border-radius: 5px;
+  transition: 200ms;
+  background-color: $lightBlue;
+}
+
+.router-link-active{
+  background-color: $yellow;
+  text-decoration-color: $orange;
+}
+
+.navbar-collapse{
+  text-align: center;
+}

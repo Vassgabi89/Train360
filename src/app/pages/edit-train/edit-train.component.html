@@ -1,6 +1,6 @@
 <div class="container" *ngIf="train">
   <div class="row">
-    <div class="col-6 offset-3">
+    <div class="col-10 col-lg-6 offset-1 offset-lg-3">
       <form #trainForm="ngForm" (ngSubmit)='onSubmit(train)'>
 
         <div class="form-group">
@@ -46,6 +46,11 @@
         <div class="alert alert-danger"
           [hidden]="trainForm.controls['description']?.valid || trainForm.controls['description']?.untouched">
           The description of the train must be max.1000 characters long.
+        </div>
+
+        <div class="form-group">
+          <label for="trainPic">Picture</label>
+          <input [(ngModel)]="train.pic" class="form-control" id="trainPic" name="pic" type="text">
         </div>
 
         <button [disabled]="!trainForm.form.valid" type="submit" class="btn btn-primary">Submit</button>

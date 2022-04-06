@@ -1,0 +1,23 @@
+<div class="container text-center">
+  <div class="row vh-100">
+    <div class="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto my-auto">
+
+    <form #loginForm="ngForm" (ngSubmit)='login()' autocomplete="on">
+      <h4 class="font-weight-bold mt-4 mb-3">Please sign in</h4>
+
+      <div class="form-group mb-2">
+        <input [(ngModel)]="adminLoginData.name" type="text" id="username" name="username" class="form-control" placeholder="Username" required pattern="^admin$" autocomplete="username">
+        <input [(ngModel)]="adminLoginData.passw" type="password" id="current-password" name="current-password" class="form-control" placeholder="Password" required pattern="^masiniszta$" autocomplete="current-password">
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input">
+        <label for="rememberMe" class="form-check-label small">Remember me</label>
+      </div>
+      <button [disabled]="!loginForm.form.valid" type="submit" class="btn w-100 mt-3 mb-5">Sign in</button>
+    </form>
+
+      <small class="text-muted">Train360 - Admin site</small>
+    </div>
+  </div>
+</div>

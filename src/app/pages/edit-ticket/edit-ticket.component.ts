@@ -37,7 +37,22 @@ export class EditTicketComponent implements OnInit {
   }
 
   onSubmit(ticket: Ticket): void {
-    console.log(ticket)
+    /*
+    //DATE FORMAT FOR SORTING
+    const myTicket = ticket
+    console.log(myTicket)
+    const departureDateElements = ticket.departure_date.split('/')
+    departureDateElements.map(dateElement => {
+      if (dateElement.length == 1) dateElement = '0'.concat(dateElement)
+      console.log(dateElement)
+    })
+    console.log(myTicket)
+    const rightDate=departureDateElements[0].concat('/').concat(departureDateElements[1]).concat('/').concat(departureDateElements[2])
+    console.log(rightDate)
+    myTicket.departure_date = rightDate
+    console.log(myTicket)
+    */
+
     if (!this.newTicket) {
       const data = this.ticketService.update(ticket).subscribe(
         //datas => console.log(datas)

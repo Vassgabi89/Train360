@@ -1,0 +1,6 @@
+@use "../assets/style/colors" as *;
+
+html, body {
+  background-color: $lightBlue;
+  color: $darkBlue;
+}

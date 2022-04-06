@@ -10,6 +10,8 @@ import { TrainService } from 'src/app/service/train.service';
 })
 export class TrainsComponent implements OnInit {
 
+  admin:boolean = (localStorage.getItem('admin') === 'true' ? true : false)
+
   trainList$ = this.trainService.getAll()
 
   constructor(
@@ -18,6 +20,7 @@ export class TrainsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   }
 
   onDelete(train: Train): void {

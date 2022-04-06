@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div *ngIf="!admin" class="welcome">
+  <div class="row">
+    <div class="col-lg-4 welcomeTexts">
+      <h1 style="font-size: 100px;">Train 360</h1>
+      <h2 style="font-size: 45px;">Where your journey begins...</h2>
+    </div>
+  </div>
+  <!-- <div class="imgContainer text-right mt-5 mr-5">
+        <img src="../../../assets/img/landing_page_background.jpg" alt="Train in the forest" width="70%">
+      </div> -->
+</div>
+
+<div *ngIf="admin" class="statistic">
+  <div class="text-center my-5">
+    <h1>Statistics</h1>
+    <app-statistics></app-statistics>
+  </div>
+</div>

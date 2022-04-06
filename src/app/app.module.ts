@@ -12,6 +12,12 @@ import { TrainsComponent } from './pages/trains/trains.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
 import { EditTicketComponent } from './pages/edit-ticket/edit-ticket.component';
 import { EditTrainComponent } from './pages/edit-train/edit-train.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
+import { CutterPipe } from './pipe/cutter.pipe';
+import { TrainDetailComponent } from './common/train-detail/train-detail.component';
+import { LoginComponent } from './pages/login/login.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { EditTrainComponent } from './pages/edit-train/edit-train.component';
     TrainsComponent,
     TicketsComponent,
     EditTicketComponent,
-    EditTrainComponent
+    EditTrainComponent,
+    FilterPipe,
+    SorterPipe,
+    CutterPipe,
+    TrainDetailComponent,
+    LoginComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,

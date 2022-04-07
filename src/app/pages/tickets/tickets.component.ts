@@ -74,14 +74,17 @@ export class TicketsComponent implements OnInit {
     this.myTicket = ticket
     this.showTicketDetail = true
     this.myTicket.passengers = 1
-    this.myTicket.reducedFare = 0
+    this.myTicket.reducedFare = 10
+    this.myTicket.fullPrice = Math.round(this.myTicket.price*this.myTicket.passengers*(1-this.myTicket.reducedFare/100))
   }
 
   calcFullPrice():void {
     console.log(this.myTicket.passengers)
     console.log(this.myTicket.reducedFare)
+    console.log(this.myTicket.fullPrice)
     if (this.myTicket.passengers && this.myTicket.reducedFare)
-    this.myTicket.fullPrice = (this.myTicket.price * this.myTicket.passengers)*(this.myTicket.reducedFare/100)
+    this.myTicket.fullPrice = Math.round(this.myTicket.price*this.myTicket.passengers*(1-this.myTicket.reducedFare/100))
+    console.log(this.myTicket.fullPrice)
   }
 
   onBuy(ticket: Ticket):void {

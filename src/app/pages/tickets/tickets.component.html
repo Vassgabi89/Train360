@@ -62,9 +62,9 @@
           <i *ngIf="sortKey == 'arrival_date' && sortDirection  == 'A...Z'" class="fa fa-caret-up ml-2"></i>
           <i *ngIf="sortKey == 'arrival_date' && sortDirection  == 'Z...A'" class="fa fa-caret-down ml-2"></i>
         </th>
-        <th (click)="sorting('trainID')">Train
-          <i *ngIf="sortKey == 'trainID' && sortDirection  == 'A...Z'" class="fa fa-caret-up ml-2"></i>
-          <i *ngIf="sortKey == 'trainID' && sortDirection  == 'Z...A'" class="fa fa-caret-down ml-2"></i>
+        <th (click)="sorting('train')">Train
+          <i *ngIf="sortKey == 'train' && sortDirection  == 'A...Z'" class="fa fa-caret-up ml-2"></i>
+          <i *ngIf="sortKey == 'train' && sortDirection  == 'Z...A'" class="fa fa-caret-down ml-2"></i>
         </th>
         <th (click)="sorting('class')" class="hideInTabletView">Class
           <i *ngIf="sortKey == 'class' && sortDirection  == 'A...Z'" class="fa fa-caret-up ml-2"></i>
@@ -143,7 +143,7 @@
             <div class="form-group">
               <label for="ticketPassengers">Passengers:</label>
               <input [(ngModel)]="myTicket.passengers" type="number" class="form-control" id="ticketPassengers"
-                name="passengers" required pattern="^[1-5]{1}$" value=1 (keydown)="calcFullPrice()" (mousedown)="calcFullPrice()">
+                name="passengers" required pattern="^[1-5]{1}$" value=1 (keyup)="calcFullPrice()" (mouseup)="calcFullPrice()">
             </div>
             <div class="alert alert-danger"
               [hidden]="ticketForm.controls['passengers']?.valid || ticketForm.controls['passengers']?.untouched">

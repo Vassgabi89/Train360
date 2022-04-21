@@ -1,0 +1,115 @@
+@use "../../../assets/style/colors" as *;
+
+h1{
+  color: $orange;
+  text-shadow: 1px 1px 2px $darkBlue;
+}
+
+th {
+  cursor: pointer;
+  color: white;
+  background-color: $middleBlue;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.table, thead, th{
+  border: none!important;
+}
+
+tr{
+  background-color: $lightestBlue;
+  line-height: 40px;
+}
+
+table{
+  background-color: white;
+}
+
+.ticket:hover {
+  opacity: 0.8;
+}
+
+.th:hover{
+  color: $orange;
+  background-color: red!important;
+}
+
+tr:nth-of-type(odd) {
+  background-color: $lightBlue!important;
+}
+
+td{
+  border-top: none;
+  border-bottom: 1px solid $orange!important;
+}
+
+.fa-caret-up, .fa-caret-down {
+  color: $orange;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .hideInTabletView{
+    display: none;
+  }
+
+  .row{
+    margin: 0!important;
+  }
+
+  .searchTicket{
+    text-align: left!important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hideInMobileView{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  table{
+    font-size: 0.7rem;
+  }
+  td {
+    padding: 2px;
+  }
+}
+
+.ticketDetailModal {
+  position: fixed!important;
+  z-index: 2;
+  top: 10%;
+  width: 50%;
+  border: 2px solid black;
+  background-color: white;
+  left: 25%;
+}
+
+.closeModalBtn {
+  float: right;
+  width: 30px!important;
+  height: 30px!important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ticketInformation span{
+  font-size: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .ticketDetailModal {
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    top: 10%;
+  }
+
+}

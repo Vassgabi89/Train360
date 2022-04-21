@@ -1,0 +1,50 @@
+<h1 class="text-center my-5"> My tickets</h1>
+
+<div class="row mx-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Departure time</th>
+        <th>Travel time</th>
+        <th>Arrival time</th>
+        <th >Train</th>
+        <th >Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="myTickets">
+      <!-- <tr class="ticket"
+        *ngFor="let ticket of ticketCookie | async">
+        <td>{{ ticket.departure_location }}</td>
+        <td>{{ ticket.arrival_location }}</td>
+        <td class="text-center hideInMobileView">{{ ticket.departure_date }} {{ ticket.departure_time }}</td>
+        <td class="text-center hideInTabletView">{{ ticket.travel_time }}</td>
+        <td class="text-center hideInMobileView">{{ ticket.arrival_date }} {{ ticket.arrival_time }}</td>
+        <td>{{ ticket.train?.name }}</td>
+        <td class="text-center">{{ ticket.fullPrice }} Ft</td>
+        <td class="text-center">
+          <div class="btn-group">
+            <button class="btn btn-primary"><i class="fa fa-print" aria-hidden="true"></i></button>
+          </div>
+        </td>
+      </tr> -->
+      <tr class="ticket"
+        *ngFor="let ticket of myTickets">
+        <td>{{ ticket.departure_location }}</td>
+        <td>{{ ticket.arrival_location }}</td>
+        <td class="text-center hideInMobileView">{{ ticket.departure_date }} {{ ticket.departure_time }}</td>
+        <td class="text-center hideInTabletView">{{ ticket.travel_time }}</td>
+        <td class="text-center hideInMobileView">{{ ticket.arrival_date }} {{ ticket.arrival_time }}</td>
+        <td>{{ ticket.train?.name }}</td>
+        <td class="text-center">{{ ticket.fullPrice }} Ft</td>
+        <td class="text-center">
+          <div class="btn-group">
+            <button class="btn btn-primary"><i class="fa fa-print" aria-hidden="true"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

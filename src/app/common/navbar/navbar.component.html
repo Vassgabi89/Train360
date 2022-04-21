@@ -11,8 +11,14 @@
         <li class="nav-item mr-2" routerLinkActive="router-link-active" [routerLinkActiveOptions]= "{exact: true}">
           <a class="nav-link" aria-current="page" routerLink="tickets">Tickets</a>
         </li>
+        <li *ngIf="!admin" class="nav-item mr-2" routerLinkActive="router-link-active" [routerLinkActiveOptions]= "{exact: true}">
+          <a class="nav-link" aria-current="page" routerLink="mytickets">My tickets</a>
+        </li>
         <li class="nav-item" routerLinkActive="router-link-active" [routerLinkActiveOptions]= "{exact: true}">
           <a class="nav-link" aria-current="page" routerLink="trains">Trains</a>
+        </li>
+        <li class="nav-item ml-2" routerLinkActive="router-link-active" [routerLinkActiveOptions]= "{exact: true}">
+          <a class="nav-link" aria-current="page" routerLink="about">About</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">

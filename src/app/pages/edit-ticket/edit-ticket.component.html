@@ -93,9 +93,9 @@
           <div class="col-4">
             <div class="form-group">
               <label for="ticketClass">Class*</label>
-              <select class="form-control" id="ticketClass" name="class" required>
-                <option [selected]="ticket.class === 1" (ngValue)=1>First class</option>
-                <option [selected]="ticket.class === 2" (ngValue)=2>Second class</option>
+              <select [(ngModel)]="ticket.class" class="form-control" id="ticketClass" name="class" required>
+                <option value="1">First class</option>
+                <option value="2">Second class</option>
               </select>
             </div>
           </div>

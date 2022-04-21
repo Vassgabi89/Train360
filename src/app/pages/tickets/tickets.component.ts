@@ -70,25 +70,46 @@ export class TicketsComponent implements OnInit {
     //location.reload()
   }
 
-  onSelect(ticket: Ticket):void {
+  onSelect(ticket: Ticket): void {
     this.myTicket = ticket
     this.showTicketDetail = true
     this.myTicket.passengers = 1
     this.myTicket.reducedFare = 10
-    this.myTicket.fullPrice = Math.round(this.myTicket.price*this.myTicket.passengers*(1-this.myTicket.reducedFare/100))
+    this.myTicket.fullPrice = Math.round(this.myTicket.price * this.myTicket.passengers * (1 - this.myTicket.reducedFare / 100))
   }
 
-  calcFullPrice():void {
+  calcFullPrice(): void {
     console.log(this.myTicket.passengers)
     console.log(this.myTicket.reducedFare)
     console.log(this.myTicket.fullPrice)
     if (this.myTicket.passengers && this.myTicket.reducedFare)
-    this.myTicket.fullPrice = Math.round(this.myTicket.price*this.myTicket.passengers*(1-this.myTicket.reducedFare/100))
+      this.myTicket.fullPrice = Math.round(this.myTicket.price * this.myTicket.passengers * (1 - this.myTicket.reducedFare / 100))
     console.log(this.myTicket.fullPrice)
   }
 
-  onBuy(ticket: Ticket):void {
-    console.log(ticket)
+  onBuy(ticket: Ticket): void {
+  }
+
+  saveTicket(ticket: Ticket): void {
+    /*
+    const ticketCookie = document.cookie.split('; ').find(cookie => cookie.startsWith(`myTickets=`))
+    //if (!ticketCookie) document.cookie = `myTickets= ${ticket.departure_location}---${ticket.arrival_location}---${ticket.departure_date}---${ticket.departure_time}---${ticket.travel_time}---${ticket.arrival_date}---${ticket.arrival_time}---${ticket.transfers}---${ticket.class}---${ticket.services}---${ticket.train?.name}---${ticket.price}---${ticket.passengers}---${ticket.reducedFare}---${ticket.fullPrice}!!!; expires=Fri, 30 Dec 2022 20:00:00 UTC;`
+    //else {
+      const myTickets = ticketCookie?.concat(` ${ticket.departure_location}---${ticket.arrival_location}---${ticket.departure_date}---${ticket.departure_time}---${ticket.travel_time}---${ticket.arrival_date}---${ticket.arrival_time}---${ticket.transfers}---${ticket.class}---${ticket.services}---${ticket.train?.name}---${ticket.price}---${ticket.passengers}---${ticket.reducedFare}---${ticket.fullPrice}!!!;`)
+      //document.cookie = `myTickets = ${myTickets}; expires = Fri, 30 Dec 2022 20:00:00 UTC`
+      document.cookie = `myTickets = ${myTickets}; expires = Fri, 30 Dec 2022 20:00:00 UTC`
+      //console.log(ticket.departure_date)
+    //}
+    this.router.navigateByUrl('mytickets')*/
+
+    ticket.bought = true
+    this.ticketService.update(ticket).subscribe(
+      data => {
+        console.log(data)
+        this.router.navigateByUrl('mytickets')
+      }
+    )
+
   }
 
 }

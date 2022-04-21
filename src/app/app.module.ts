@@ -18,6 +18,8 @@ import { CutterPipe } from './pipe/cutter.pipe';
 import { TrainDetailComponent } from './common/train-detail/train-detail.component';
 import { LoginComponent } from './pages/login/login.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { MyTicketsComponent } from './pages/my-tickets/my-tickets.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     CutterPipe,
     TrainDetailComponent,
     LoginComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    MyTicketsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -23,5 +23,5 @@ export class Ticket {
   passengers?: number = 1
   reducedFare?: number = 0
   fullPrice?: number = 5000
-
+  bought?: boolean = false
 }

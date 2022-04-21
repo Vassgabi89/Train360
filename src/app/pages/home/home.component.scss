@@ -5,19 +5,25 @@
 }
 
 
-.welcome{
-  background-image: url("../../../assets/img/landing_page_background.jpg");
-  background-size: cover;
-  height: calc(100vh);
-  //background-repeat: no-repeat;
-}
+// .welcome{
+//   background-image: url("../../../assets/img/landing_page_background.jpg");
+//   background-size: cover;
+//   height: calc(100vh);
+//   //background-repeat: no-repeat;
+// }
 
 .welcomeTexts{
   font-family: "Railroad";
-  color: $lightestBlue;
-  margin-top: 100px;
+  color: $middleBlue;
   margin-left: 100px;
-  text-shadow: 8px 8px 10px $darkBlue;
+  text-shadow: 2px 2px 5px $darkBlue;
+}
+
+.carousel img{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+  object-position:50% 50%;
 }
 
 .imgContainer{
